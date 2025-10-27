@@ -18,6 +18,15 @@ fn main() {
     println!("Repository rating on 5 is {}", rating_float);
     println!("Repository is growing: {}", is_growing_boolean);
     println!("Repository icon is: {}", icon_char);
+
+    // Call all other functions
+    variable_and_mutability();
+    mut_ex();
+    data_types();
+    data_types_();
+    string_ex();
+    compound_types();
+    hands_on_challenge();
 }
 
 
@@ -111,69 +120,4 @@ fn hands_on_challenge() {
     println!("Favorite Number: {}", favorite_number);
     println!("Learning Rust: {}", is_learning_rust);
     println!("Initial: {}", initial);
-
-}
-
-
-/////////////////// Exercises - Day 2 //////////////////
-
-
-/* ✅ Exercise: Level 1
-
-Declare a variable named my_age and set it to your age.
-Print the value of my_age to the console.
-Create a mutable variable named my_height and assign it your height in centimeters. Update it to a new height.
-Declare a variable my_name and assign it your name as a string. Print it to the console.
-Create a variable is_student and set it to true if you are a student, or false otherwise. Print the value.
-Create a variable birth_year and calculate your birth year by subtracting your age from the current year (you can use a hardcoded current year, e.g., 2024). Print the value. */
-
-
-fn exercise1() {
-    let my_age = 25;
-    println!("My age is : {}", my_age);
-
-    let mut my_height = 160;
-    my_height = 162; //new height
-
-    let my_name = "Darkstar";
-    println!("My Name is : {}" , my_name);
-
-    let is_student = false;
-    println!("Is Student: {}", is_student);
-
-    let birth_year = 2025 - 25;
-    println!("My Birth Year is : {}", birth_year);
-
-}
-
-
-/* ✅ Exercise: Level 2
-
-Create variables for each numeric type (integer and float) and print their values:
-An integer variable my_integer set to any integer value.
-A floating-point variable my_float set to any float value.
-Declare a boolean variable is_learning_rust and set it to true. Print the value.
-Create a character variable favorite_letter and assign it your favorite letter. Print it.
-Create an array of integers called my_scores that holds your last five test scores. Print the entire array.
-Create a string variable hobby and assign it one of your hobbies. Print it, and then concatenate it with another string to create a sentence (e.g., "I enjoy [hobby]!"). Print the complete sentence. */
-
-
-fn exercise2() {
-    let my_integer = -1;
-    let my_float = 3.33;
-
-    let is_learning_rust = true;
-    println!("Learning Rust: {}", is_learning_rust);
-
-    let favorite_letter = 'P';
-    println!("My Favorite Letter is : {}", favorite_letter);
-    
-    let my_scores = [99,99,91,91,70];
-    println!( "My last five test scores are: {:?}", my_scores);
-
-    let mut hobby = String::from("Coding in Rust");
-    println!("My Hobby is : {}", hobby);
-    hobby.push_str(" and I enjoy it!");
-    println!("{}", hobby);
-
 }
